@@ -94,7 +94,7 @@ pipeline {
       sh "docker-compose -f docker-compose-test-local.yml down"
     }
     success {
-      slackSend(color: "good", message: "SUCCESS")
+      slackSend{color: "good", message: "SUCCESS"}
     }
   }
 }
